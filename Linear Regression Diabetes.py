@@ -1,15 +1,17 @@
+import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.datasets import load_diabetes
 import pandas as pd
 
-#Construct dataframe for exploratory data analysis 
-dataframe = load_diabetes(as_frame=True)
-df = dataframe.frame
+
 #we load the data set into data variable
 data = load_diabetes()
 #We load the variable data target and data to X and y to fit into linear regression model
 X = data.data
 y = data.target
+
+#We create a dataframe only on features of real data excluding target for exploratory analysis
+df = pd.DataFrame(data.data, columns=data.feature_names )
 
 #We put the linear regression function into a variable called model
 model = LinearRegression()
@@ -21,3 +23,11 @@ print(df.head(5))
 
 #We apply the linear regression model to the first 5 rows and print the results
 print(model.predict(X[:5]))
+
+
+# plot feature vs target
+plt.scatter(df['bmi'], y)
+plt.xlabel('BMI')
+plt.ylabel('Disease Progression')
+plt.title('BMI vs Target')
+plt.show()
