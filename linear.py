@@ -51,7 +51,11 @@ print("RMSE: ",RMSE)
 
 #After evaluating the model and understanding we can keep going with a UI solution for a user
 #We have to develop somewhere a student inputs the hours of study and then the program would predict and output the test grade
+#We ask for an input to the client in float type variable
 num = float(input("How many hours did you study for the exam? "))
+#We have to construct an array for the model to be able to predict the result
 num = np.array([num])   
+#We do the prediction and store it into a new variable rounded up to 2 using numpy.round function
 new = np.round(model.predict([num]),2)
+#We display the result of the prediction based on the input
 print("This is your predicted score for the test based on your hours of study:\n",new)
