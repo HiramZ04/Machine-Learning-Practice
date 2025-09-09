@@ -64,7 +64,7 @@ print("MAE: ",MAE)
 
 
 #how much off we are predicting data in dllrs COUNTING outliers
-RMSE = np.sqrt(MSE)
+RMSE = np.sqrt(mean_absolute_error(Target,model_predict))
 print("RMSE: ",RMSE)
 
 #After interpreting the results we did pretty good, and i mean is a really simple regression so we now start coding for input 
