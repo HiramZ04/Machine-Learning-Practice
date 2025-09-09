@@ -22,7 +22,7 @@ plt.show()
 model = LinearRegression()
 model.fit(X,Y)
 
-#we store the outpout of the model in a data frame
+#we store the outpout of the model in a data frame  
 model_predict = pd.DataFrame(model.predict(X))
 
 #we do a table of the actual and the predict data

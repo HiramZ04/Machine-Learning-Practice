@@ -25,7 +25,7 @@ print(tabulate(table, headers = ('y_Actual','y_Predict'), tablefmt='fancy_grid')
 
 #We print a graph to see how the linear regression adheres with the actual data and see visualy if its a good solution
 plt.scatter(X,y)
-plt.plot(X,predict,'-')
+plt.plot(X,predict,'-',color='r')
 plt.xlabel("x")
 plt.ylabel("y")
 plt.title("Predicted Data VS Actual Data")
