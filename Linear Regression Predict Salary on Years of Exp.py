@@ -6,6 +6,7 @@ from sklearn.metrics import mean_absolute_error
 import numpy as np
 import matplotlib.pyplot as plt
 from tabulate import tabulate
+import pandas as pd
 
 # Download latest version
 path = kagglehub.dataset_download("abhishek14398/salary-dataset-simple-linear-regression")
